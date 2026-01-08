@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment | Guild of Muay Thai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Muay Thai <span class="highlight">Officials</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="scoring-criteria.html">Scoring Criteria</a></li>
+                <li><a href="assessment.html" class="active">Assessment</a></li>
+            </ul>
+             <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container page-content">
+        
+        <div id="login-gate" class="login-gate">
+            <div class="login-box">
+                <h2>Restricted Access</h2>
+                <p>Please enter the assessment password provided by your instructor.</p>
+                <input type="password" id="password-input" placeholder="Enter Password">
+                <button onclick="checkPassword()" class="btn-main">Unlock Assessment</button>
+                <p id="error-msg" class="error-msg"></p>
+            </div>
+        </div>
+
+        <div id="assessment-content" style="display: none;">
+            <h1>Judging Assessment 2025</h1>
+            <p>Watch the 5 bouts below. Score them using the form at the bottom of the page.</p>
+            
+            <div class="video-grid">
+                <div class="video-card">
+                    <h3>Bout 1: Red vs Blue</h3>
+                    <div class="video-responsive">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                 <div class="video-card">
+                    <h3>Bout 2: Red vs Blue</h3>
+                    <div class="video-responsive">
+                         <iframe width="560" height="315" src="https://www.youtube.com/embed/placeholder" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <div class="form-section">
+                <h2>Submit Your Scores</h2>
+                <p>Please fill out your name, email, and scores for each fight.</p>
+                <div class="form-placeholder">
+                    <p><em>[Insert your Microsoft/Google Form Embed Code Here in HTML]</em></p>
+                    <a href="#" class="btn-main">Open Scoring Form</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
