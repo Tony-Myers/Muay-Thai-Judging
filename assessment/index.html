@@ -1,117 +1,102 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Judging assessment (restricted)</title>
-  <meta name="robots" content="noindex,nofollow" />
-  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="Restricted assessment area for Muay Thai judging candidates."/>
+  <title>Assessment | Muay Thai scoring & judging</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml"/>
+  <link rel="stylesheet" href="../assets/css/style.css"/>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to main content</a>
+<a class="skip-link" href="#main">Skip to main content</a>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="/"><span class="brand-badge" aria-hidden="true"></span><span>Muay Thai Scoring & Judging</span></a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">☰ Menu</button>
-      <nav id="site-nav" class="nav" aria-label="Primary">
-        <a href="/learn/overview/">Learn</a>
-        <a href="/practice/">Practice</a>
-        <a href="/resources/">Resources</a>
-        <a href="/register/">Register</a>
-        <a href="/contact/">Contact</a>
+<header class="site-header">
+  <div class="container">
+    <div class="navbar">
+      <a class="brand" href="../index.html">
+        <img src="../assets/images/logo.svg" alt="Muay Thai scoring and judging"/>
+      </a>
+
+      <button class="nav-toggle focus-ring" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">
+        Menu
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-expanded="false" aria-label="Primary">
+        <ul>
+          <li><a href="../overview.html">Overview</a></li>
+          <li><a href="../scoring-hierarchy.html">Scoring hierarchy</a></li>
+          <li><a href="../what-scores.html">What scores</a></li>
+          <li><a href="../judging-process.html">How judges decide</a></li>
+          <li><a href="../scorecards.html">Scorecards</a></li>
+          <li><a href="../running-race.html">Running race</a></li>
+          <li><a href="../rules-decisions.html">Rules & decisions</a></li>
+          <li><a href="../practice.html">Practice</a></li>
+          <li><a href="../resources.html">Resources</a></li>
+          <li><a href="./">Assessment</a></li>
+        </ul>
       </nav>
     </div>
-  </header>
+  </div>
+</header>
 
-  <main id="main">
-    <div class="container">
-      <h1>Judging assessment</h1>
-      <p class="lead">Restricted access. If you are taking the assessment, enter the password provided by the course organiser.</p>
+<main id="main">
+<section class="hero">
+  <div class="container">
+    <div class="card pad">
+      <div class="kicker">Assessment area</div>
+      <h1>Judging assessment (restricted)</h1>
+      <p class="lead">This area is intended for candidates taking the judging assessment.</p>
 
-      <!-- Gate -->
-      <section class="card" data-protect="gate" aria-label="Assessment unlock">
-        <h2 style="margin-top:0;">Enter password</h2>
-        <form id="unlockForm">
-          <label for="password">Password</label><br />
-          <input id="password" name="password" type="password" autocomplete="current-password"
-                 style="margin-top:.4rem; padding:.7rem; width:min(520px,100%); border-radius:12px; border:1px solid var(--border); background:var(--panel); color:var(--text);" />
-          <div style="margin-top: .8rem;">
-            <button class="btn primary" type="submit">Unlock</button>
+      <div class="notice small">
+        <strong>Security note:</strong> GitHub Pages is static hosting. This page uses a client-side password gate, which provides only basic deterrence. For real protection, place the site behind an access gateway (for example Cloudflare Access) or host the assessment area on a platform with authentication.
+      </div>
+
+      <div data-gate style="margin-top:14px">
+        <form data-pass-form class="grid-2" style="align-items:end">
+          <div>
+            <label for="pw">Password</label>
+            <input id="pw" class="focus-ring" type="password" data-pass autocomplete="current-password" required />
+            <div class="small" style="color: var(--danger)" data-pass-msg aria-live="polite"></div>
           </div>
-          <p id="unlockMsg" class="kicker" aria-live="polite"></p>
+          <div>
+            <button type="submit">Enter</button>
+            <div class="small muted">Template default password is <kbd>changeme</kbd>. Change it before publishing.</div>
+          </div>
         </form>
+      </div>
 
-        <p class="kicker">
-          Note: client-side access controls are for convenience only. For high-stakes assessments, use Cloudflare Access or equivalent.
-        </p>
-      </section>
-
-      <!-- Protected content -->
-      <section class="card" data-protect="content" hidden tabindex="-1" aria-label="Assessment content">
-        <h2 style="margin-top:0;">Assessment videos</h2>
-        <p id="assessmentIntro" class="kicker"></p>
-
-        <div id="videos"></div>
-
-        <div class="callout" role="note" style="margin-top: 1rem;">
-          <strong>Submission</strong>
-          <p>Add your submission link here (e.g., Microsoft Form / Google Form) and any instructions.</p>
+      <div data-app hidden style="margin-top:18px">
+        <div class="notice small">
+          <strong>Assessment format:</strong> <span data-note></span>
         </div>
-      </section>
+
+        <div class="section-title" style="margin-top:12px">
+          <h2>Assessment videos</h2>
+          <span class="badge">YouTube (privacy-enhanced embeds)</span>
+        </div>
+
+        <div data-videos></div>
+
+        <div class="section-title" style="margin-top:12px">
+          <h2>Submission</h2>
+        </div>
+        <div data-submission></div>
+      </div>
     </div>
-  </main>
+  </div>
+</section>
+</main>
 
-  <footer><div class="container"><small>© <span id="y"></span> Muay Thai Scoring & Judging.</small></div></footer>
+<footer class="footer">
+  <div class="container">
+    <div class="small"><a href="../index.html">Back to main site</a></div>
+  </div>
+</footer>
 
-  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
-  <script src="/assets/js/main.js"></script>
-  <script src="/assets/js/protect.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="assessment.js"></script>
 
-  <script>
-    // Load assessment video list (privacy-enhanced embeds)
-    (async function(){
-      const content = document.querySelector("[data-protect='content']");
-      const videosEl = document.getElementById("videos");
-      const introEl = document.getElementById("assessmentIntro");
-      if (!content || !videosEl) return;
-
-      try {
-        const res = await fetch("/assets/data/assessment-videos.json", {cache: "no-store"});
-        const data = await res.json();
-        introEl.textContent = data.intro || "";
-
-        (data.videos || []).forEach(v => {
-          const wrap = document.createElement("section");
-          wrap.className = "card";
-          wrap.style.marginTop = "1rem";
-
-          const h = document.createElement("h3");
-          h.textContent = v.title || "Assessment video";
-          wrap.appendChild(h);
-
-          const note = document.createElement("p");
-          note.className = "kicker";
-          note.textContent = v.notes || "";
-          wrap.appendChild(note);
-
-          const vid = document.createElement("div");
-          vid.className = "video";
-          const iframe = document.createElement("iframe");
-          iframe.loading = "lazy";
-          iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-          iframe.referrerPolicy = "strict-origin-when-cross-origin";
-          iframe.title = v.title || "YouTube video";
-          iframe.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(v.youtubeId) + "?rel=0";
-          vid.appendChild(iframe);
-          wrap.appendChild(vid);
-
-          videosEl.appendChild(wrap);
-        });
-      } catch (e) {
-        introEl.textContent = "Unable to load assessment videos. Please try again later.";
-      }
-    })();
-  </script>
+<script src="../assets/js/main.js"></script>
 </body>
 </html>

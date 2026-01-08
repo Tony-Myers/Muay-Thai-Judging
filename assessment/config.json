@@ -1,0 +1,23 @@
+{
+  "salt": "mtj-v1",
+  "hash": "1d987bd4795d56730ce0d34d5390a5089eeca1ccad0d203e1cea51ba201540da",
+  "assessmentNote": "For the assessment you will judge 10 fights \u2014 5 in person and 5 online over the week. Results are provided after all submissions.",
+  "videos": [
+    {
+      "id": "assessment-1",
+      "title": "Assessment fight 1",
+      "youtubeId": "",
+      "notes": "Replace with your assessment video and any specific instructions."
+    },
+    {
+      "id": "assessment-2",
+      "title": "Assessment fight 2",
+      "youtubeId": "",
+      "notes": "Replace with your assessment video and any specific instructions."
+    }
+  ],
+  "submission": {
+    "text": "Add your submission link here (e.g., Microsoft Form / Google Form).",
+    "url": ""
+  }
+}
