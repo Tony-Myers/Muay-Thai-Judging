@@ -1,70 +1,81 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Official resource for Muay Thai Judging, Scoring, and Rules based on the 2025 Guild of Muay Thai Officials standards.">
-    <title>Guild of Muay Thai Officials | Judging Standards</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Muay Thai scoring and judging (traditional Thai scoring)</title>
+  <meta name="description" content="Muay Thai scoring and judging: effect, balance, clean weapons, clinch, and whole-fight scoring." />
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">Muay Thai <span class="highlight">Officials</span></a>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="scoring-criteria.html">Scoring Criteria</a></li>
-                <li><a href="assessment.html" class="btn-primary">Assessment Portal</a></li>
-            </ul>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">
+        <span class="brand-badge" aria-hidden="true"></span>
+        <span>Muay Thai Scoring & Judging</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">☰ Menu</button>
+      <nav id="site-nav" class="nav" aria-label="Primary">
+        <a href="/learn/overview/">Learn</a>
+        <a href="/practice/">Practice</a>
+        <a href="/resources/">Resources</a>
+        <a href="/register/">Register</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <header class="hero">
-        <div class="hero-content container">
-            <h1>The Art & Science of Judging Muay Thai</h1>
-            <p>Master the 2025 standards for scoring, dominance, and effect.</p>
-            <div class="hero-buttons">
-                <a href="scoring-criteria.html" class="btn-main">Learn the Rules</a>
-                <a href="assessment.html" class="btn-secondary">Take Assessment</a>
-            </div>
-        </div>
-    </header>
+  <main id="main">
+    <div class="container">
+      <div class="badge">Traditional Thai scoring (not entertainment formats)</div>
+      <h1>Muay Thai judging: effect, balance, and control over the whole fight</h1>
+      <p class="lead">
+        Muay Thai is judged by comparing who is stronger in Muay Thai terms over five rounds:
+        visible effectiveness, dominance, balance/posture, and control.  [oai_citation:3‡Guild of Muay Thai Officials judging presentation 2025.pdf](sediment://file_00000000054c71f4bdad69e3e27cbd60)
+      </p>
 
-    <section class="section container">
-        <h2 class="section-title">Core Principles</h2>
-        <div class="grid-3">
-            <div class="card">
-                <i class="fas fa-balance-scale card-icon"></i>
-                <h3>Top-Down Judging</h3>
-                <p>We do not score round-by-round strikes. We judge the narrative. A boxer can score while moving backwards if they maintain balance and control.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-fist-raised card-icon"></i>
-                <h3>Effect Over Volume</h3>
-                <p>"Touching is not scoring." Points are awarded for visible impact, off-balancing, and damage that changes behavior.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-book-reader card-icon"></i>
-                <h3>Education First</h3>
-                <p>Resources for fighters, coaches, and aspiring officials to understand exactly what wins a fight in 2025.</p>
-            </div>
-        </div>
-    </section>
+      <div class="callout" role="note" aria-label="Key principle">
+        <strong>Key principle:</strong>
+        <p>Scoring is not direction-dependent. You can score moving forward, backward, sideways, or on the ropes. Judges reward effective scoring with balance and control, not simply advancing.  [oai_citation:4‡Guild of Muay Thai Officials judging presentation 2025.pdf](sediment://file_00000000054c71f4bdad69e3e27cbd60)</p>
+      </div>
 
-    <footer>
-        <div class="container footer-content">
-            <p>&copy; 2025 Guild of Muay Thai Officials. All Rights Reserved.</p>
-            <p>Based on the standard rules and regulations for Boxing Sport Competitions (2556 B.E).</p>
-        </div>
-    </footer>
+      <div class="grid" style="margin-top: 1rem;">
+        <section class="card" style="grid-column: span 6;">
+          <h3>Start here</h3>
+          <p class="kicker">Overview of how judges interpret the criteria in practice.</p>
+          <a class="btn primary" href="/learn/overview/">Learn the basics →</a>
+        </section>
 
-    <script src="script.js"></script>
+        <section class="card" style="grid-column: span 6;">
+          <h3>The scoring hierarchy</h3>
+          <p class="kicker">A top-down decision order: effect first, then tie-breakers.</p>
+          <a class="btn primary" href="/learn/hierarchy/">See the hierarchy →</a>
+        </section>
+
+        <section class="card" style="grid-column: span 6;">
+          <h3>Practice fights</h3>
+          <p class="kicker">Judge short clips and compare your decisions.</p>
+          <a class="btn" href="/practice/">Go to practice →</a>
+        </section>
+
+        <section class="card" style="grid-column: span 6;">
+          <h3>Scorecards and rounds</h3>
+          <p class="kicker">How to record scoring and explain who won using the criteria.</p>
+          <a class="btn" href="/learn/scorecards/">Scorecards →</a>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>© <span id="y"></span> Muay Thai Scoring & Judging.</small>
+    </div>
+  </footer>
+
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+  <script src="/assets/js/main.js"></script>
 </body>
 </html>
