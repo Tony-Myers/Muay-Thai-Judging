@@ -1,22 +1,18 @@
 (function () {
-  const nav = document.querySelector(".nav");
-  const btn = document.querySelector(".nav-toggle");
-  if (btn && nav) {
-    btn.addEventListener("click", () => {
-      const open = nav.getAttribute("data-open") === "true";
-      nav.setAttribute("data-open", String(!open));
-      btn.setAttribute("aria-expanded", String(!open));
+  const toggle = document.querySelector('[data-nav-toggle]');
+  const nav = document.querySelector('nav.primary-nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const expanded = nav.getAttribute('aria-expanded') === 'true';
+      nav.setAttribute('aria-expanded', String(!expanded));
+      toggle.setAttribute('aria-expanded', String(!expanded));
     });
   }
 
-  // Mark current link for accessibility
-  const here = location.pathname.replace(/\/$/, "");
-  document.querySelectorAll(".nav a").forEach(a => {
-    const href = a.getAttribute("href");
-    if (!href) return;
-    const target = href.replace(/\/$/, "");
-    if (target && (target === here || (target === "" && here === ""))) {
-      a.setAttribute("aria-current", "page");
-    }
+  // Mark current page in nav (best-effort)
+  const current = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  document.querySelectorAll('nav.primary-nav a').forEach(a => {
+    const href = (a.getAttribute('href') || '').split('/').pop().toLowerCase();
+    if (href === current) a.setAttribute('aria-current', 'page');
   });
 })();
