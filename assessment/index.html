@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Judging assessment (restricted)</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/"><span class="brand-badge" aria-hidden="true"></span><span>Muay Thai Scoring & Judging</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">☰ Menu</button>
+      <nav id="site-nav" class="nav" aria-label="Primary">
+        <a href="/learn/overview/">Learn</a>
+        <a href="/practice/">Practice</a>
+        <a href="/resources/">Resources</a>
+        <a href="/register/">Register</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <h1>Judging assessment</h1>
+      <p class="lead">Restricted access. If you are taking the assessment, enter the password provided by the course organiser.</p>
+
+      <!-- Gate -->
+      <section class="card" data-protect="gate" aria-label="Assessment unlock">
+        <h2 style="margin-top:0;">Enter password</h2>
+        <form id="unlockForm">
+          <label for="password">Password</label><br />
+          <input id="password" name="password" type="password" autocomplete="current-password"
+                 style="margin-top:.4rem; padding:.7rem; width:min(520px,100%); border-radius:12px; border:1px solid var(--border); background:var(--panel); color:var(--text);" />
+          <div style="margin-top: .8rem;">
+            <button class="btn primary" type="submit">Unlock</button>
+          </div>
+          <p id="unlockMsg" class="kicker" aria-live="polite"></p>
+        </form>
+
+        <p class="kicker">
+          Note: client-side access controls are for convenience only. For high-stakes assessments, use Cloudflare Access or equivalent.
+        </p>
+      </section>
+
+      <!-- Protected content -->
+      <section class="card" data-protect="content" hidden tabindex="-1" aria-label="Assessment content">
+        <h2 style="margin-top:0;">Assessment videos</h2>
+        <p id="assessmentIntro" class="kicker"></p>
+
+        <div id="videos"></div>
+
+        <div class="callout" role="note" style="margin-top: 1rem;">
+          <strong>Submission</strong>
+          <p>Add your submission link here (e.g., Microsoft Form / Google Form) and any instructions.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer><div class="container"><small>© <span id="y"></span> Muay Thai Scoring & Judging.</small></div></footer>
+
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/protect.js"></script>
+
+  <script>
+    // Load assessment video list (privacy-enhanced embeds)
+    (async function(){
+      const content = document.querySelector("[data-protect='content']");
+      const videosEl = document.getElementById("videos");
+      const introEl = document.getElementById("assessmentIntro");
+      if (!content || !videosEl) return;
+
+      try {
+        const res = await fetch("/assets/data/assessment-videos.json", {cache: "no-store"});
+        const data = await res.json();
+        introEl.textContent = data.intro || "";
+
+        (data.videos || []).forEach(v => {
+          const wrap = document.createElement("section");
+          wrap.className = "card";
+          wrap.style.marginTop = "1rem";
+
+          const h = document.createElement("h3");
+          h.textContent = v.title || "Assessment video";
+          wrap.appendChild(h);
+
+          const note = document.createElement("p");
+          note.className = "kicker";
+          note.textContent = v.notes || "";
+          wrap.appendChild(note);
+
+          const vid = document.createElement("div");
+          vid.className = "video";
+          const iframe = document.createElement("iframe");
+          iframe.loading = "lazy";
+          iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+          iframe.referrerPolicy = "strict-origin-when-cross-origin";
+          iframe.title = v.title || "YouTube video";
+          iframe.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(v.youtubeId) + "?rel=0";
+          vid.appendChild(iframe);
+          wrap.appendChild(vid);
+
+          videosEl.appendChild(wrap);
+        });
+      } catch (e) {
+        introEl.textContent = "Unable to load assessment videos. Please try again later.";
+      }
+    })();
+  </script>
+</body>
+</html>
