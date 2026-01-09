@@ -1,23 +1,121 @@
 {
   "salt": "mtj-v1",
   "hash": "1d987bd4795d56730ce0d34d5390a5089eeca1ccad0d203e1cea51ba201540da",
-  "assessmentNote": "For the assessment you will judge 10 fights \u2014 5 in person and 5 online over the week. Results are provided after all submissions.",
-  "videos": [
+  "assessmentTitle": "Muay Thai Judging Assessment",
+  "assessmentNote": "Judge the fights below using the Muay Thai scoring hierarchy. Record your scores using the Microsoft Form.",
+  "submission": {
+    "text": "Record your scores via Microsoft Forms.",
+    "url": "https://forms.office.com/e/RUUb5uqRAv"
+  },
+  "qrCode": {
+    "image": "qr-code.jpeg",
+    "alt": "QR code linking to the Microsoft Forms submission page"
+  },
+  "levels": [
     {
-      "id": "assessment-1",
-      "title": "Assessment fight 1",
-      "youtubeId": "",
-      "notes": "Replace with your assessment video and any specific instructions."
+      "id": "low",
+      "title": "Low challenge",
+      "description": "Clearer scoring moments and more obvious separation on the hierarchy. Use these to calibrate your approach.",
+      "fights": [
+        {
+          "id": "low-1",
+          "title": "Low challenge fight 1",
+          "youtubeId": "oQM5dEcGTAE",
+          "notes": ""
+        },
+        {
+          "id": "low-2",
+          "title": "Low challenge fight 2",
+          "youtubeId": "49KDz7I_Je0",
+          "notes": ""
+        },
+        {
+          "id": "low-3",
+          "title": "Low challenge fight 3",
+          "youtubeId": "YSrvitGE32M",
+          "notes": ""
+        },
+        {
+          "id": "low-4",
+          "title": "Low challenge fight 4 (to be added)",
+          "youtubeId": "",
+          "notes": "Video link pending."
+        }
+      ]
     },
     {
-      "id": "assessment-2",
-      "title": "Assessment fight 2",
-      "youtubeId": "",
-      "notes": "Replace with your assessment video and any specific instructions."
+      "id": "moderate",
+      "title": "Moderate challenge",
+      "description": "More exchanges where you must apply the hierarchy carefully (effect, balance, clean scoring, clinch control, defence/counters).",
+      "fights": [
+        {
+          "id": "mod-1",
+          "title": "Moderate challenge fight 1",
+          "youtubeId": "PxjTWGyMPN4",
+          "notes": ""
+        },
+        {
+          "id": "mod-2",
+          "title": "Moderate challenge fight 2",
+          "youtubeId": "ZVw40UreCgU",
+          "notes": ""
+        },
+        {
+          "id": "mod-3",
+          "title": "Moderate challenge fight 3",
+          "youtubeId": "b6185MTlUuQ",
+          "notes": ""
+        },
+        {
+          "id": "mod-4",
+          "title": "Moderate challenge fight 4",
+          "youtubeId": "68Nwb-F7UIE",
+          "notes": ""
+        },
+        {
+          "id": "mod-5",
+          "title": "Moderate challenge fight 5",
+          "youtubeId": "cImGREv-78g",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "high",
+      "title": "Higher challenge",
+      "description": "Closer fights and/or more ambiguous signals. Expect to justify decisions using the hierarchy and whole-fight narrative.",
+      "fights": [
+        {
+          "id": "high-1",
+          "title": "Higher challenge fight 1",
+          "youtubeId": "VCRT9a2aHjE",
+          "notes": ""
+        },
+        {
+          "id": "high-2",
+          "title": "Higher challenge fight 2",
+          "youtubeId": "qbv1CqEXlKU",
+          "notes": ""
+        },
+        {
+          "id": "high-3",
+          "title": "Higher challenge fight 3",
+          "youtubeId": "93kSb5F6aQ4",
+          "notes": ""
+        },
+        {
+          "id": "high-4",
+          "title": "Higher challenge fight 4",
+          "youtubeId": "Dzr_wDmlLyQ",
+          "notes": ""
+        },
+        {
+          "id": "high-5",
+          "title": "Higher challenge fight 5",
+          "youtubeId": "diKGikll14Y",
+          "notes": ""
+        }
+      ]
     }
-  ],
-  "submission": {
-    "text": "Add your submission link here (e.g., Microsoft Form / Google Form).",
-    "url": ""
-  }
+  ]
 }
