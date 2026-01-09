@@ -1,0 +1,20 @@
+[
+  {
+    "id": "practice-1",
+    "title": "Practice fight 1",
+    "youtubeId": "",
+    "prompt": "Judge using the hierarchy: effect \u2192 balance \u2192 clean scoring \u2192 clinch control \u2192 defence/counters.",
+    "officialSummary": [
+      "Add your official round-by-round explanation here (or link to it)."
+    ]
+  },
+  {
+    "id": "practice-2",
+    "title": "Practice fight 2",
+    "youtubeId": "",
+    "prompt": "Pay attention to posture breaks, clinch turns and whether strikes are convincingly returned.",
+    "officialSummary": [
+      "Add your official round-by-round explanation here (or link to it)."
+    ]
+  }
+]

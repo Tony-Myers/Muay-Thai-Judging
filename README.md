@@ -18,6 +18,8 @@ The web copy is in the HTML files at the repository root:
 - `judging-process.html`
 - `scorecards.html`
 - `running-race.html`
+- `misconceptions.html`
+- `research.html`
 - `rules-decisions.html`
 
 ## Practice fights
@@ -51,3 +53,11 @@ PY
 ## Styling
 - CSS: `assets/css/style.css`
 - JavaScript: `assets/js/main.js`
+
+
+## Branding
+- Site logo: `assets/images/logo.svg` (replace with your preferred SVG/PNG).
+- Guild image used on the home and about pages: `assets/images/guild-of-mt-officials.jpeg`.
+
+## Copyright
+Footer copyright is set to `© Tony Myers 2026` in all pages.
